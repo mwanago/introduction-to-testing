@@ -23,7 +23,7 @@ describe('The divide function', () => {
     });
   });
 
-  describe('when second number equals zero', () => {
+  describe('when the second number equals zero', () => {
     describe('and the first number does not equal zero', () => {
       it('should return Infinity', () => {
         const result = divide(5, 0);
