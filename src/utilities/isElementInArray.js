@@ -1,6 +1,9 @@
 export function isElementInArray(array, desiredElement) {
-  const elementIndex = array.findIndex((element) => {
-    return element === desiredElement;
-  });
-  return elementIndex !== -1;
+  for (let i = 0; i < array.length; ++i) {
+    const element = array.pop();
+    if (element === desiredElement) {
+      return true;
+    }
+  }
+  return false;
 }
