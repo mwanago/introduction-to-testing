@@ -7,7 +7,7 @@ describe('The isElementInArray', () => {
       array = ['orange', 'banana', 'strawberry'];
     });
     describe('and the desired element is not in the array', () => {
-      it('should return true', () => {
+      it('should return false', () => {
         const result = isElementInArray(array, 'coconut');
         expect(result).toBe(false);
       });
