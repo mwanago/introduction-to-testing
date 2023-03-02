@@ -1,17 +1,16 @@
 import { getPostsSortedByTitle } from './getPostsSortedByTitle';
-import { getPosts } from './getPosts';
+import getPosts from './getPosts';
 
-jest.mock('./getPosts', () => {
-  return {
-    getPosts: jest.fn(),
-  };
-});
+jest.mock('./getPosts', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
 
 describe('The getPostsSortedByTitle function', () => {
   it('should call the getPosts function', () => {
     getPostsSortedByTitle();
     expect(getPosts).toHaveBeenCalled();
-  })
+  });
   describe('when the getPosts function responds with a list of posts', () => {
     beforeEach(() => {
       getPosts.mockResolvedValue([
