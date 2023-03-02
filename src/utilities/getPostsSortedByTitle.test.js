@@ -8,6 +8,10 @@ jest.mock('./getPosts', () => {
 });
 
 describe('The getPostsSortedByTitle function', () => {
+  it('should call the getPosts function', () => {
+    getPostsSortedByTitle();
+    expect(getPosts).toHaveBeenCalled();
+  })
   describe('when the getPosts function responds with a list of posts', () => {
     beforeEach(() => {
       getPosts.mockResolvedValue([
