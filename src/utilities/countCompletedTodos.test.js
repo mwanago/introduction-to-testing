@@ -2,7 +2,7 @@ import { countCompletedTodods } from './getNumberOfCompletedTodos';
 
 describe('The countCompletedTodos function', () => {
   let todos;
-  describe('When provided with correct array of todos', () => {
+  describe('when provided with correct array of todos', () => {
     beforeEach(() => {
       todos = [
         {
